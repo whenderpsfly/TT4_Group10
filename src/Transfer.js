@@ -26,28 +26,27 @@ export default function Transfer() {
         //      "amount":amount,
         //      "eGift":egift,
         //      "message":msg}
-        const transferAPI = async () => {
+        async function sendAPI(){
             const res = await fetch ('https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/add', 
                 {
+                    'method': 'POST',
                     'headers': {
                         'x-api-key': 'wvn4vaj9S24aI8OiWsddf5B1h5z0EjKQ41GnONBy'
                     },
-                    'body': {
-                        'custID': 10, // hardcode for now, to be integrated
-                        'accountKey': "ubrvt7g7-tb80-jtjv-d49e-yrwbyi5tuki", // hardcode for now, to be integrated
-                        "payeeID":payeeID,
-                        "amount":amount,
-                        "eGift":egift,
-                        "message":msg
-                    }
+                    'body': JSON.stringify({
+                        custID: 10, // hardcode for now, to be integrated
+                        accountKey: "ubrvt7g7-tb80-jtjv-d49e-yrwbyi5tuki", // hardcode for now, to be integrated
+                        payeeID:payeeID,
+                        amount:amount,
+                        eGift:egift,
+                        message:msg
+                    })
                 })
-        }
-        transferAPI()
+            console.log(res)
+            }
+        sendAPI()
+
     }
-
-    
-
-
 
 
     function toggleeGift(){
