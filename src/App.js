@@ -1,3 +1,4 @@
+import Transfer from './Transfer';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Username from './components/username';
