@@ -5,7 +5,7 @@ export default function Transfer() {
     const transferIDNameRef = useRef()
     const transferAmtNameRef = useRef()
     const transferMsgNameRef = useRef()
-    const [egift, seteGift] = useState(false)
+    var [egift, seteGift] = useState(false)
     // placeholder egift
     // var egift = false
 
@@ -29,6 +29,11 @@ export default function Transfer() {
 
     }
 
+    function toggleeGift(){
+        egift = seteGift(!egift)
+        
+    }
+
     return (
         <>
             <div>Transfer to:</div>
@@ -39,12 +44,12 @@ export default function Transfer() {
             <input ref={transferMsgNameRef} type="text" />
             <div> 
                 eGift? 
-                <input 
-                    type="checkbox" 
-                    checked={egift}
-                    // onClick={something}
-                    style = {{display : 'inline-block'}} 
-                />
+                    <input 
+                        type="checkbox" 
+                        checked={egift}
+                        onChange={toggleeGift}
+                        style = {{display : 'inline-block'}} 
+                    />
             </div>
 
             <button onClick={transferButton}>Transfer</button>
