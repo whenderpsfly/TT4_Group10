@@ -1,12 +1,20 @@
-import './App.css';
-import Balance from './Components/Balance.jsx';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Username from './components/username';
+import Password from './components/password';
+import Login from './components/login';
+import Checkbox from './components/checkbox'
+import {Container} from '@material-ui/core';
 
 function App() {
   return (
     <div className="App">
-        <p>
-          <Balance />
-        </p>
+      <Container maxWidth='xs' style={{backgroundColor:"skyblue"}}>
+        <Username></Username>
+        <Password></Password>
+        <Login></Login>
+        <Checkbox></Checkbox>
+      </Container>
     </div>
   );
 }
