@@ -31,8 +31,10 @@ export default function Transfer() {
                 {
                     'method': 'POST',
                     'headers': {
-                        'x-api-key': 'wvn4vaj9S24aI8OiWsddf5B1h5z0EjKQ41GnONBy'
-                    },
+                        'x-api-key': 'wvn4vaj9S24aI8OiWsddf5B1h5z0EjKQ41GnONBy',
+                        "content-type": "application/json",
+                        "accept": "application/json"
+                        },
                     'body': JSON.stringify({
                         custID: 10, // hardcode for now, to be integrated
                         accountKey: "ubrvt7g7-tb80-jtjv-d49e-yrwbyi5tuki", // hardcode for now, to be integrated
