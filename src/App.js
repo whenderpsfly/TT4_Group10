@@ -3,10 +3,10 @@ import './App.css';
 import TransactionHistory from './Components/transactionhistory'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Username from './components/username';
-import Password from './components/password';
-import Login from './components/login';
-import Checkbox from './components/checkbox'
+import Username from './Components/username';
+import Password from './Components/password';
+import Login from './Components/login';
+import Checkboxes from './Components/checkbox'
 import {Container} from '@material-ui/core';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Username></Username>
         <Password></Password>
         <Login></Login>
-        <Checkbox></Checkbox>
+        <Checkboxes />
         <TransactionHistory />
       </Container>
     </div>
