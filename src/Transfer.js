@@ -5,9 +5,9 @@ export default function Transfer() {
     const transferIDNameRef = useRef()
     const transferAmtNameRef = useRef()
     const transferMsgNameRef = useRef()
-    // const [egift, seteGift] = useState(false)
+    const [egift, seteGift] = useState(false)
     // placeholder egift
-    var egift = false
+    // var egift = false
 
     function transferButton(e){
         const payeeID = transferIDNameRef.current.value
@@ -16,7 +16,7 @@ export default function Transfer() {
         console.log("payeeID: " + payeeID)
         console.log("amount: " + amount)
         console.log("message: " + msg)
-        // console.log("egift: " + egift)
+        console.log("egift: " + egift)
         transferAmtNameRef.current.value = 0
     }
 
