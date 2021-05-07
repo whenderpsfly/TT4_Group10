@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Transaction from './transaction';
+import {Card} from '@material-ui/core'
+
 
 const data = [{
     custID: 1,
@@ -10,41 +12,42 @@ const data = [{
     message: "message"
 }]
 
+const user = {custID: 1, accountKey: "ubrvt7g7-tb80-jtjv-d49e-yrwbyi5tuki"}
+
 const TransactionHistory = () => {
 
     const [transaction, setTrans] = useState([]);
 
     const getTransHist = async () => {
         try {
-            //actual api call, to uncomment once data flow is finalised
-            /* const res = await fetch ('https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/view', 
+            const res = await fetch ('https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/view', 
             {
-                'headers': {
+                method: 'POST',
+                headers: {
                     'x-api-key': 'wvn4vaj9S24aI8OiWsddf5B1h5z0EjKQ41GnONBy'
                 },
-                'body': {
-                    'custID': "custID",
-                    'accountKey': "accountKey"
-                }
+                body: JSON.stringify(user)
             })
             const transactions = await res.json()
-            setTrans(transactions) */ 
-            console.log("data", data)
-            setTrans(data)
+            if (transactions) {
+                setTrans(transactions)
+            } else {
+                setTrans(data)
+            }
         } catch (err) {
             console.log(err)
         }
     }
 
     return (
-        <React.Fragment>
+        <Card>
             <button onClick={getTransHist}>View Transaction History</button>
             <div>
                 {transaction.map((item) =>
-                    <Transaction transaction={item} key={data.indexOf(item)}/>
+                    <Transaction transaction={item} key={transaction.indexOf(item)}/>
                 )}
             </div>
-        </React.Fragment>
+        </Card>
     )
 }
 
