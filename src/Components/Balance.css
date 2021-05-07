@@ -1,0 +1,19 @@
+table{
+  width: 50%;
+}
+
+td, table th {
+    border: 1px solid #c9c9c9;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.account{
+  display: flex;
+  justify-content: center;
+}
