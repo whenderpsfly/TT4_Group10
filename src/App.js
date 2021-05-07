@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import TransactionHistory from './Components/transactionhistory'
 import React, {useState} from 'react';
+import Login from './Login'
 import Transfer from './Transfer';
 import ReactDOM from 'react-dom';
 import Username from './Components/username';
@@ -30,8 +31,10 @@ function App() {
           <TransactionHistory />
         </UserContext.Provider>
       </Container>
+      <Login></Login>
     </div>
   );
 }
 
 export default App;
+
