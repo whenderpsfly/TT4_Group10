@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import TransactionHistory from './Components/transactionhistory'
 import React, {useState} from 'react';
+import Transfer from './Transfer';
 import ReactDOM from 'react-dom';
 import Username from './Components/username';
 import Password from './Components/password';
