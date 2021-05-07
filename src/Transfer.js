@@ -18,6 +18,15 @@ export default function Transfer() {
         console.log("message: " + msg)
         console.log("egift: " + egift)
         transferAmtNameRef.current.value = 0
+
+        // Call API here to Add Transaction using
+        // {"custID":custID, (from login)
+        //      "accountKey":___,
+        //      "payeeID":payeeID,
+        //      "amount":amount,
+        //      "eGift":egift,
+        //      "message":msg}
+
     }
 
     return (
@@ -33,7 +42,7 @@ export default function Transfer() {
                 <input 
                     type="checkbox" 
                     checked={egift}
-                    //onClick={something}
+                    // onClick={something}
                     style = {{display : 'inline-block'}} 
                 />
             </div>
