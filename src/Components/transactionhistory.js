@@ -16,7 +16,7 @@ const user = {custID: 1, accountKey: "ubrvt7g7-tb80-jtjv-d49e-yrwbyi5tuki"}
 
 const TransactionHistory = () => {
 
-    const [transaction, setTrans] = useState([]);
+    const [transaction, setTrans] = useState(data);
 
     const getTransHist = async () => {
         try {
