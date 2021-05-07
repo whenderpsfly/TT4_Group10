@@ -1,22 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Username from './components/username';
-import Password from './components/password';
-import Login from './components/login';
-import Checkbox from './components/checkbox'
-import {Container} from '@material-ui/core';
+import Login from './Login'
 
 function App() {
   return (
     <div className="App">
-      <Container maxWidth='xs' style={{backgroundColor:"skyblue"}}>
-        <Username></Username>
-        <Password></Password>
-        <Login></Login>
-        <Checkbox></Checkbox>
-      </Container>
+      <Login></Login>
     </div>
   );
 }
 
 export default App;
+
